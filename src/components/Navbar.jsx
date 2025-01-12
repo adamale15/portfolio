@@ -11,7 +11,6 @@ const Navbar = ({ onScrollTo, activeSection }) => {
   const handleToggleTheme = () => {
     toggleTheme();
   };
-  d;
 
   return (
     <NavWrapper>
