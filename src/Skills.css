@@ -1,0 +1,26 @@
+div {
+  padding: 40px 20px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skill-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.skill-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.skill-card p {
+  font-size: 16px;
+}
