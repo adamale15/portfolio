@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
     font-weight: 400;
     font-style: normal;
     font-family: 'Kumbh Sans', sans-serif;
@@ -23,6 +22,8 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth; /* Smooth vertical scrolling */
     height: 100vh; /* Full viewport height */
     overflow: hidden;
+    cursor: none;
+
   }
 
   html {

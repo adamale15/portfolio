@@ -45,16 +45,15 @@ export default Navbar;
 // Styled Components
 const NavWrapper = styled.nav`
   position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 70px;
   background-color: ${({ theme }) => theme.navbarBg};
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   backdrop-filter: blur(10px);
-  border-radius: 15px;
+  border-bottom: 1px solid ${({ theme }) => theme.navbarBorder || "#e5e5e5"};
 `;
 
 const NavContainer = styled.div`
@@ -79,15 +78,15 @@ const Logo = styled.h1`
 
 const MenuSection = styled.div`
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 `;
 
 const NavItem = styled(motion.div)`
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  padding: 0.5rem 1.5rem;
-  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
   background-color: ${({ $isActive, theme }) =>
     $isActive ? theme.linkActiveBackground : "transparent"};
   color: ${({ $isActive, theme }) =>
