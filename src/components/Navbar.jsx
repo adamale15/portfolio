@@ -11,6 +11,7 @@ const Navbar = ({ onScrollTo, activeSection }) => {
   const handleToggleTheme = () => {
     toggleTheme();
   };
+  d;
 
   return (
     <NavWrapper>
@@ -32,7 +33,7 @@ const Navbar = ({ onScrollTo, activeSection }) => {
         </MenuSection>
 
         {/* Theme Toggle */}
-        <ThemeToggle onClick={handleToggleTheme}>
+        <ThemeToggle onClick={toggleTheme}>
           {isDarkTheme ? "☀️" : "🌙"}
         </ThemeToggle>
       </NavContainer>
@@ -50,27 +51,26 @@ const NavWrapper = styled.nav`
   width: 100%;
   height: 70px;
   background-color: ${({ theme }) => theme.navbarBg};
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid ${({ theme }) => theme.navbarBorder || "#e5e5e5"};
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center; /* Center the navbar horizontally */
 `;
 
 const NavContainer = styled.div`
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
 `;
 
 const Logo = styled.h1`
   font-size: 1.8rem;
   font-weight: bold;
-  color: ${({ theme }) => theme.color};
   cursor: pointer;
+  color: ${({ theme }) => theme.color};
   &:hover {
     color: ${({ theme }) => theme.linkHover};
   }
@@ -81,12 +81,12 @@ const MenuSection = styled.div`
   gap: 1.5rem;
 `;
 
-const NavItem = styled(motion.div)`
+const NavItem = styled.div`
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 50px;
   background-color: ${({ $isActive, theme }) =>
     $isActive ? theme.linkActiveBackground : "transparent"};
   color: ${({ $isActive, theme }) =>
