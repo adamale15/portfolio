@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Preloader from "./components/Preloader";
 import { ThemeContextProvider } from "./ThemeContext";
 import "@fontsource/kumbh-sans"; // Defaults to 400 weight
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -83,6 +84,7 @@ function App() {
   return (
     <ThemeContextProvider>
       <Router>
+        <Analytics />
         <GlobalStyle />
         {loading && <Preloader onFinish={handleFinishLoading} />}
         {!loading && (
